@@ -1,6 +1,15 @@
+<script>
+    import {modal} from "../data/store"
+    import Modal from "../components/modal/modal.svelte";
+</script>
+
 <main id="main">
     <slot></slot>
 </main>
+
+{#if $modal.open}
+    <Modal modal={$modal}/>
+{/if}
 
 <style>
     #main{
