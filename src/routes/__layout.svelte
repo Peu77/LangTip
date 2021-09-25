@@ -36,6 +36,7 @@
 
     :global(body){
         box-sizing: border-box;
+        background-color: #273142;
     }
 
     :global(*){
@@ -51,6 +52,7 @@
         top: 50%;
         transform: translate(-50%, -50%);
         background-color: var(--primary);
+        box-shadow: 5px 10px #000000;
     }
 
     @media (min-width: 1400px){
