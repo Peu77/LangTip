@@ -15,6 +15,7 @@
         color: white;
         font-weight: 600;
         background-color: var(--dark);
+        border-radius: var(--radius);
         transition: filter 0.2s;
     }
 

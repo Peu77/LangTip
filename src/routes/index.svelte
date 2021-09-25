@@ -1,14 +1,16 @@
 <script>
-    import {tests} from "../data/store";
+    import {openModal, tests} from "../data/store";
     import Test from "../components/test.svelte";
     import Button from "../components/button.svelte"
+    import CreateTest from "../components/modal/list/createTest.svelte"
+    import Input from "../components/input.svelte"
 
     let search = ""
 </script>
 
 <div id="controls">
-    <Button text="Create-Test" click={() => alert("create new test")}/>
-    <input class="input" type="text" placeholder="Search" bind:value={search}/>
+    <Button text="Create-Test" click={() => openModal(CreateTest)}/>
+    <Input placeHolder="Search" bind:value={search}/>
 </div>
 
 <div id="tests">
@@ -29,14 +31,5 @@
         display: grid;
         grid-gap: 16px;
         margin-bottom: 20px;
-    }
-
-    .input{
-        font-size: 16px;
-        background-color: var(--dark);
-        border: none;
-        outline: none;
-        padding: 10px;
-        color: white;
     }
 </style>

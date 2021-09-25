@@ -20,7 +20,8 @@
 
 <style>
     :global(:root){
-        --dark: #003c8f;
+        --dark: #111c4b;
+        --radius: 10px;
         --light: #5e92f3;
         --primary: #1565c0;
         --text: #14cba8;
@@ -56,7 +57,7 @@
         #main{
             max-width: 800px;
             max-height: 600px;
-            border-radius: 10px;
+            border-radius: var(--radius);
             padding: 36px;
         }
     }

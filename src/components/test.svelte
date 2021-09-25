@@ -14,7 +14,7 @@
 <style>
     .test{
         font-weight: 800;
-        border-radius: 5px;
+        border-radius: var(--radius);
         padding: 10px 15px;
         background-color: var(--dark);
         text-align: center;
@@ -32,12 +32,12 @@
         cursor: pointer;
         -webkit-user-drag: none;
         user-select: none;
-        transition: background-color 0.2s;
+        border-radius: 50%;
+        transition: background-color 0.3s;
     }
 
     .icon:hover{
         filter: invert(0.3);
-        border-radius: 50%;
         background-color: rgba(79, 63, 63, 0.7);
     }
 </style>
