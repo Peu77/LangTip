@@ -1,6 +1,13 @@
 <script>
-    import {modal} from "../data/store"
+    import {modal, loadTests, saveTests} from "../data/store"
     import Modal from "../components/modal/modal.svelte";
+    import {onMount} from "svelte";
+
+    onMount(() => {
+        loadTests()
+        window.onbeforeunload = saveTests
+    })
+
 </script>
 
 <main id="main">
@@ -22,7 +29,7 @@
         top: 50%;
         transform: translate(-50%, -50%);
         border-radius: 10px;
-        background-color: #003c8f;
+        background-color: var(--primary);
     }
 </style>
 

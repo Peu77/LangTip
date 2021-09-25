@@ -4,7 +4,7 @@
 </script>
 
 <div class="modal">
-
+    <svelte:component this={modal.content}/>
 </div>
 
 <style>

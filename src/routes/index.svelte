@@ -1,12 +1,16 @@
 <script>
-    import {loadTests, tests} from "../data/store";
+    import {tests} from "../data/store";
     import Test from "../components/test.svelte";
+
+    let data = []
+   tests.subscribe(value => data = value)
 </script>
 
-<svelte:window on:load={loadTests}/>
+
+
 <div id="tests">
-    {#each $tests as test}
-        <Test test={tests}/>
+    {#each data as test}
+        <Test test={test}/>
         {/each}
 </div>
 
