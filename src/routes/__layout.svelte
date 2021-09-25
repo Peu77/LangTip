@@ -20,7 +20,7 @@
 
 <style>
     :global(:root){
-        --dark: #111c4b;
+        --dark: #151f52;
         --radius: 10px;
         --light: #5e92f3;
         --primary: #1565c0;

@@ -1,7 +1,9 @@
 <script>
     import {page} from "$app/stores"
+    import {tests} from "../../../data/store";
 
-   const test = $page.params.test
+   const uuid = $page.params.test
+    const test = $tests.find(test => test.uuid === uuid)
 </script>
 
-<p>Edit test/{test}</p>
+<h1>{test.name}</h1>

@@ -20,6 +20,6 @@
     }
 
     .button:hover{
-        filter: opacity(88%);
+        filter: opacity(80%);
     }
 </style>
