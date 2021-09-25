@@ -1,4 +1,7 @@
 <script>
+    import {openModal} from "../data/store";
+    import DeleteTest from "../components/modal/list/deleteTest.svelte"
+
     export let test
 </script>
 
@@ -7,7 +10,7 @@
     <div class="icons">
         <img class="icon" src="/icons/play.svg" alt="play-icon"/>
         <a href="/test/edit/{test.uuid}"><img class="icon" src="/icons/edit.svg" alt="edit-icon"/></a>
-        <img class="icon" src="/icons/remove.svg" alt="edit-icon"/>
+        <img class="icon" src="/icons/remove.svg" alt="edit-icon" on:click={() => openModal(DeleteTest, {test})}/>
     </div>
 </div>
 

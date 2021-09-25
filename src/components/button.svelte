@@ -1,8 +1,19 @@
 <script>
+    import button from "./button.svelte";
+    import {onMount} from "svelte";
+
     export let click, text
+    export let background
+    let p
+
+    onMount(() => {
+        if(background !== undefined)
+            p.style.backgroundColor = background
+    })
+
 </script>
 
-<p class="button" on:click={click}>
+<p class="button" on:click={click} bind:this={p}>
     {text}
 </p>
 

@@ -7,7 +7,7 @@
 
 <div class="black" on:click={closeModal}></div>
 <div class="modal">
-    <svelte:component this={modal.content}/>
+    <svelte:component this={modal.content} props={modal.props}/>
 </div>
 
 <style>

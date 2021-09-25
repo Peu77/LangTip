@@ -9,21 +9,25 @@
 <div class="content">
     <Input placeHolder="name" bind:value={name}/>
     <div class="buttons">
-        <Button click={() => createTest(name)} text="Create"/>
+        <Button background="#577523"
+                click={() => {
+            if(createTest(name))
+                closeModal()
+        }} text="Create"/>
         <Button click={closeModal} text="Cancel"/>
     </div>
 
 </div>
 
 <style>
-.content{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 
-.buttons{
-    display: flex;
-    justify-content: space-around;
-}
+    .buttons {
+        display: flex;
+        justify-content: space-around;
+    }
 </style>
