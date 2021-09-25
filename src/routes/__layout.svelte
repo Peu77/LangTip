@@ -19,7 +19,31 @@
 {/if}
 
 <style>
+    :global(:root){
+        --dark: #003c8f;
+        --light: #5e92f3;
+        --primary: #1565c0;
+        --text: #14cba8;
+    }
+
+
+    :global(p, h1, h2, h3, h4) {
+        color: var(--text);
+        padding: 5px 10px;
+        font-family: Montserrat, Arial, serif;
+    }
+
+    :global(body){
+        box-sizing: border-box;
+    }
+
+    :global(*){
+        margin: 0;
+        padding: 0;
+    }
+
     #main{
+        padding: 16px;
         width: 100vw;
         height: 100vh;
         max-width: 800px;
