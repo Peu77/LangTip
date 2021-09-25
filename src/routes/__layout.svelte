@@ -43,17 +43,23 @@
     }
 
     #main{
-        padding: 16px;
         width: 100vw;
         height: 100vh;
-        max-width: 800px;
-        max-height: 600px;
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
         border-radius: 10px;
         background-color: var(--primary);
+    }
+
+    @media (min-width: 1400px){
+        #main{
+            max-width: 800px;
+            max-height: 600px;
+            border-radius: 0;
+            padding: 36px;
+        }
     }
 </style>
 
