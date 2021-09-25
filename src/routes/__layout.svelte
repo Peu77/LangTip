@@ -2,6 +2,7 @@
     import {modal, loadTests, saveTests} from "../data/store"
     import Modal from "../components/modal/modal.svelte";
     import {onMount} from "svelte";
+    import ParticleHandler from "../components/particle/particleHandler.svelte"
 
     onMount(() => {
         loadTests()
@@ -9,6 +10,8 @@
     })
 
 </script>
+
+<ParticleHandler/>
 
 <main id="main">
     <slot></slot>
