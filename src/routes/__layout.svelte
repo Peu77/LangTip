@@ -49,7 +49,6 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        border-radius: 10px;
         background-color: var(--primary);
     }
 
@@ -57,7 +56,7 @@
         #main{
             max-width: 800px;
             max-height: 600px;
-            border-radius: 0;
+            border-radius: 10px;
             padding: 36px;
         }
     }
