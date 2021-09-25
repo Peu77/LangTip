@@ -7,7 +7,7 @@
 </script>
 
 <div id="controls">
-    <Button text="Create-Test" click={() => console.log("hi")}/>
+    <Button text="Create-Test" click={() => alert("create new test")}/>
     <input class="input" type="text" placeholder="Search" bind:value={search}/>
 </div>
 

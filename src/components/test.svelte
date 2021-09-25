@@ -6,7 +6,7 @@
     <p>{test.name}</p>
     <div class="icons">
         <img class="icon" src="/icons/play.svg" alt="play-icon"/>
-        <img class="icon" src="/icons/edit.svg" alt="edit-icon"/>
+        <a href="/test/edit/{test.uuid}"><img class="icon" src="/icons/edit.svg" alt="edit-icon"/></a>
         <img class="icon" src="/icons/remove.svg" alt="edit-icon"/>
     </div>
 </div>
