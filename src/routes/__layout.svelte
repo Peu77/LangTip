@@ -2,7 +2,6 @@
     import {modal, loadTests, saveTests} from "../data/store"
     import Modal from "../components/modal/modal.svelte";
     import {onMount} from "svelte";
-    import ParticleHandler from "../components/particle/particleHandler.svelte"
 
     onMount(() => {
         loadTests()
@@ -10,8 +9,6 @@
     })
 
 </script>
-
-<ParticleHandler/>
 
 <main id="main">
     <slot></slot>
@@ -50,20 +47,20 @@
     #main{
         width: 100vw;
         height: 100vh;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
         background-color: var(--primary);
-        box-shadow: 5px 10px #000000;
+        padding: 36px;
     }
 
-    @media (min-width: 1400px){
+    @media (min-width: 1200px){
         #main{
             max-width: 800px;
             max-height: 600px;
             border-radius: var(--radius);
-            padding: 36px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 5px 10px #000000;
         }
     }
 </style>

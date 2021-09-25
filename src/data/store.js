@@ -3,7 +3,6 @@ import Test from "./test";
 
 export const tests = writable([])
 export const modal = writable({open: false})
-export const particles = writable([])
 
 export function openModal(content) {
     modal.set({
