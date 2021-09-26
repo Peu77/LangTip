@@ -16,18 +16,45 @@
     let totalErrors = 0
     let start
     let stop
+    let firstWords = []
+    let lastWords = []
 
     const settings = ["random"]
     const config = new Map()
+
+    function changeConfig(setting) {
+        config[setting] = !config[setting]
+
+        if (config["random"]) {
+            text = ""
+            currentLevel = 0
+            updateLevelInfos()
+        }
+    }
+
+    function updateWords(){
+        if(currentQuestion !== undefined){
+            const b = Math.random() < 0.5
+
+            if(b){
+                firstWords = currentQuestion.words
+                lastWords = currentQuestion.otherWords
+            }else{
+                firstWords = currentQuestion.otherWords
+                lastWords = currentQuestion.words
+            }
+        }
+    }
 
     settings.forEach(setting => config[setting] = false)
 
     function updateLevelInfos() {
         currentQuestion = questions[currentLevel]
+        updateWords()
         if (currentLevel === -1) {
             text = "finish"
             stop = Date.now()
-        } else
+        } else if (!config["random"])
             text = "Level " + (currentLevel + 1) + "/" + questions.length
         input = ""
     }
@@ -49,16 +76,22 @@
     }
         if(event.key === "Enter"){
             if(currentLevel !== -1){
-                if(!currentQuestion.otherWords.includes(input)){
-                    error = currentQuestion.otherWords.join(";")
+                if(!firstWords.includes(input)){
+                    error = firstWords.join(";")
                     totalErrors++
                     return
                 }
-                currentLevel++
-                if(currentLevel === questions.length){
+                if(config["random"])
+                    currentLevel = Math.floor(Math.random() * (questions.length - 1))
+                    else
+                    currentLevel++
+
+                    if(currentLevel === questions.length){
                          currentLevel = -1
                         currentQuestion = undefined
                 }
+
+
                 error = ""
                 updateLevelInfos()
             }
@@ -70,7 +103,7 @@
         <h2>{text}</h2>
         {#if currentQuestion !== undefined}
             <div class="words">
-                <h1>{currentQuestion.words[Math.floor(Math.random() * (currentQuestion.words.length - 1))]}</h1>
+                <h1>{lastWords[Math.floor(Math.random() * (lastWords.length - 1))]}</h1>
                 <h2 class="error">{error}</h2>
             </div>
 
@@ -90,7 +123,8 @@
 
         <div class="settings">
             {#each settings as setting}
-                <p class={"setting " + (config[setting]? "enable": "")} on:click={() => config[setting] = !config[setting]}>{setting}</p>
+                <p class={"setting " + (config[setting]? "enable": "")}
+                   on:click={() => changeConfig(setting)}>{setting}</p>
             {/each}
         </div>
     </div>
@@ -101,7 +135,6 @@
         justify-content: center;
         display: flex;
         align-items: center;
-        justify-content: center;
         flex-direction: column;
         padding: 20px;
         gap: 20px;
@@ -123,11 +156,12 @@
         color: #a11010;
     }
 
-    .settings{
+    .settings {
         font-weight: bold;
         width: 100%;
         display: flex;
     }
+
     .setting {
         cursor: pointer;
         color: gray;
@@ -135,7 +169,7 @@
         transition: color 0.2s;
     }
 
-    .enable{
+    .enable {
         color: greenyellow;
     }
 </style>
