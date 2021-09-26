@@ -17,6 +17,11 @@
     let start
     let stop
 
+    const settings = ["random"]
+    const config = new Map()
+
+    settings.forEach(setting => config[setting] = false)
+
     function updateLevelInfos() {
         currentQuestion = questions[currentLevel]
         if (currentLevel === -1) {
@@ -43,7 +48,6 @@
         start = Date.now()
     }
         if(event.key === "Enter"){
-            console.log("play " + currentQuestion.otherWords)
             if(currentLevel !== -1){
                 if(!currentQuestion.otherWords.includes(input)){
                     error = currentQuestion.otherWords.join(";")
@@ -66,14 +70,14 @@
         <h2>{text}</h2>
         {#if currentQuestion !== undefined}
             <div class="words">
-                <h1>{currentQuestion.words}</h1>
+                <h1>{currentQuestion.words[Math.floor(Math.random() * (currentQuestion.words.length - 1))]}</h1>
                 <h2 class="error">{error}</h2>
             </div>
 
             <Input bind:value={input} placeHolder="word"/>
         {/if}
         {#if currentLevel === -1}
-            <h3>Time: {(stop-start) / 1000} Seconds</h3>
+            <h3>Time: {(stop - start) / 1000} Seconds</h3>
             <h3>Errors: {totalErrors}</h3>
             <Button text="Again" click={() => {
                 currentLevel = 0
@@ -83,11 +87,18 @@
                 updateLevelInfos()
             }}/>
         {/if}
+
+        <div class="settings">
+            {#each settings as setting}
+                <p class={"setting " + (config[setting]? "enable": "")} on:click={() => config[setting] = !config[setting]}>{setting}</p>
+            {/each}
+        </div>
     </div>
 {/if}
 
 <style>
     .container {
+        justify-content: center;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -110,5 +121,21 @@
 
     .error {
         color: #a11010;
+    }
+
+    .settings{
+        font-weight: bold;
+        width: 100%;
+        display: flex;
+    }
+    .setting {
+        cursor: pointer;
+        color: gray;
+        user-select: none;
+        transition: color 0.2s;
+    }
+
+    .enable{
+        color: greenyellow;
     }
 </style>
