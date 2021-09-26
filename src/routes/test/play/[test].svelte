@@ -19,7 +19,7 @@
     let firstWords = []
     let lastWords = []
 
-    const settings = ["random"]
+    const settings = ["random", "random_language"]
     const config = new Map()
 
     function changeConfig(setting) {
@@ -32,14 +32,17 @@
         }
     }
 
-    function updateWords(){
-        if(currentQuestion !== undefined){
-            const b = Math.random() < 0.5
+    function updateWords() {
+        if (currentQuestion !== undefined) {
+            let b = Math.random() < 0.5
 
-            if(b){
+            if (!config["random_language"])
+                b = false
+
+            if (b) {
                 firstWords = currentQuestion.words
                 lastWords = currentQuestion.otherWords
-            }else{
+            } else {
                 firstWords = currentQuestion.otherWords
                 lastWords = currentQuestion.words
             }
