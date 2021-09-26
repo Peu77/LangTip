@@ -25,6 +25,7 @@
         --light: #5e92f3;
         --primary: #1565c0;
         --text: #14cba8;
+        --gap: 16px;
     }
 
 

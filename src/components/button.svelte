@@ -13,9 +13,12 @@
 
 </script>
 
-<p class="button" on:click={click} bind:this={p}>
-    {text}
-</p>
+<div class="button" on:click={click} bind:this={p}>
+    <p >
+        {text}
+    </p>
+</div>
+
 
 <style>
     .button{
@@ -28,6 +31,11 @@
         background-color: var(--dark);
         border-radius: var(--radius);
         transition: filter 0.2s;
+    }
+
+    .button p{
+        user-select: none;
+        color: white;
     }
 
     .button:hover{

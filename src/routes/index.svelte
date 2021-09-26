@@ -36,8 +36,7 @@
 <div id="tests">
     {#each $tests.filter(test => test.name.toLowerCase().includes(search.toLowerCase()) || search === "") as test (test.uuid)}
         <div in:receive="{{key: test.uuid}}"
-             animate:flip
-       >
+             animate:flip>
             <Test test={test}/>
         </div>
 
@@ -47,14 +46,14 @@
 <style>
     #controls {
         display: flex;
-        margin-bottom: 16px;
-        gap: 16px;
+        margin-bottom: var(--gap);
+        gap: var(--gap);
     }
 
     #tests {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
         display: grid;
-        grid-gap: 16px;
+        grid-gap: var(--gap);
         margin-bottom: 20px;
     }
 </style>
