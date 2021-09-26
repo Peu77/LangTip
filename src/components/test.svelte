@@ -1,6 +1,7 @@
 <script>
     import {openModal} from "../data/store";
     import DeleteTest from "../components/modal/list/deleteTest.svelte"
+    import Icon from "../components/icon.svelte"
 
     export let test
 </script>
@@ -8,9 +9,9 @@
 <div class="test">
     <p>{test.name}</p>
     <div class="icons">
-        <img class="icon" src="/icons/play.svg" alt="play-icon"/>
-        <a href="/test/edit/{test.uuid}"><img class="icon" src="/icons/edit.svg" alt="edit-icon"/></a>
-        <img class="icon" src="/icons/remove.svg" alt="edit-icon" on:click={() => openModal(DeleteTest, {test})}/>
+        <Icon src="/icons/play.svg"/>
+        <a href="/test/edit/{test.uuid}"><Icon src="/icons/edit.svg"/></a>
+        <Icon src="/icons/remove.svg" click={() => openModal(DeleteTest, {test})}/>
     </div>
 </div>
 
@@ -27,20 +28,5 @@
         display: flex;
         margin: 0 auto;
         justify-content: center;
-    }
-
-    .icon{
-        min-width: 30px;
-        max-width: 30px;
-        cursor: pointer;
-        -webkit-user-drag: none;
-        user-select: none;
-        border-radius: 50%;
-        transition: background-color 0.3s;
-    }
-
-    .icon:hover{
-        filter: invert(0.3);
-        background-color: rgba(79, 63, 63, 0.7);
     }
 </style>
