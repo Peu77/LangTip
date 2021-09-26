@@ -8,10 +8,9 @@
     let words = ""
     let otherWords = ""
 
-    function split(string){
-        if(string.includes(","))
-            return string.split(",")
-        return [string]
+
+    function split(string) {
+       return string.split(",")
     }
 
     function isEdit() {
@@ -21,8 +20,8 @@
     onMount(() => {
         if (isEdit()) {
             console.log("is edit")
-            words = props.currentData.words
-            otherWords = props.currentData.otherWords
+            words = props.currentData.words.join(",")
+            otherWords = props.currentData.otherWords.join(",")
         }
     })
 </script>
@@ -41,7 +40,6 @@
         {:else}
             <Button text="Edit" background="#577523" click={() => {
                 if(words !== "" && otherWords !== ""){
-                    console.log(otherWords)
                     props.editSelf(split(words), split(otherWords))
                     closeModal()
                     }

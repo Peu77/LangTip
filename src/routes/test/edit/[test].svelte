@@ -14,7 +14,6 @@
         tests.subscribe(data => {
             test = data.find(test => test.uuid === uuid)
             if (test !== undefined) {
-                console.log(test)
                 questions = test.questions
             }
 
