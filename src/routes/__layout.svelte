@@ -45,11 +45,32 @@
         padding: 0;
     }
 
+    :global(::-webkit-scrollbar){
+        width: 10px;
+        border-radius: var(--radius);
+    }
+
+    :global(::-webkit-scrollbar-track){
+        background: #f1f1f1;
+        border-radius: var(--radius);
+    }
+
+    :global(::-webkit-scrollbar-thumb){
+        background: #888;
+        border-radius: var(--radius);
+    }
+
+    :global(::-webkit-scrollbar-thumb:hover){
+        background: #555;
+    }
+
     #main{
         width: 100vw;
         height: 100vh;
         background-color: var(--primary);
         padding: 36px;
+        overflow: auto;
+
     }
 
     @media (min-width: 1200px){
