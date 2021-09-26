@@ -1,9 +1,11 @@
 <script>
     import {page} from "$app/stores"
-    import {saveTests, tests} from "../../../data/store";
+    import {openModal, saveTests, tests} from "../../../data/store";
     import Button from "../../../components/button.svelte"
     import Question from "../../../components/question.svelte"
     import {onMount} from "svelte";
+    import createQuestion from "../../../components/modal/list/createQuestion.svelte";
+    import {v4} from "uuid"
 
     const uuid = $page.params.test
     let test
@@ -11,13 +13,12 @@
     onMount(() => {
         tests.subscribe(data => {
             test = data.find(test => test.uuid === uuid)
-            if (test !== undefined){
+            if (test !== undefined) {
                 console.log(test)
                 questions = test.questions
             }
 
         })
-
     })
 
 </script>
@@ -25,15 +26,34 @@
     <div id="controls">
         <h2 class="text">{test.name}</h2>
         <Button text="Create-Question" click={() => {
-            questions = [...questions, {}]
-            test.questions = questions
-            saveTests()
+            openModal(createQuestion, {
+                create: (words, otherWords) => {
+                     questions = [...questions, {
+                         words,
+                         otherWords,
+                         uuid: v4()
+                     }]
+                 test.questions = questions
+                    saveTests()
+                },
+            })
         }}/>
     </div>
 
     <div id="questions">
         {#each questions as question }
-            <Question data={question}/>
+            <Question data={question}
+                      editSelf={(words, otherWords) => {
+                          question.words = words
+                          question.otherWords = otherWords
+                          questions = questions
+                          saveTests()
+                      }}
+                      deleteSelf={() => {
+                questions = questions.filter(target => target.uuid !== question.uuid)
+                test.questions = questions
+                saveTests()
+            }}/>
         {/each}
     </div>
 {/if}
@@ -58,8 +78,8 @@
         display: grid;
     }
 
-    @media (max-width: 600px ){
-        #questions{
+    @media (max-width: 600px ) {
+        #questions {
             grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
         }
     }

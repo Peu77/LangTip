@@ -9,7 +9,7 @@
 <div class="test">
     <p>{test.name}</p>
     <div class="icons">
-        <Icon src="/icons/play.svg"/>
+        <a href="/test/play/{test.uuid}"><Icon src="/icons/play.svg"/></a>
         <a href="/test/edit/{test.uuid}"><Icon src="/icons/edit.svg"/></a>
         <Icon src="/icons/remove.svg" click={() => openModal(DeleteTest, {test})}/>
     </div>

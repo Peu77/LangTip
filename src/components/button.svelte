@@ -1,5 +1,4 @@
 <script>
-    import button from "./button.svelte";
     import {onMount} from "svelte";
 
     export let click, text

@@ -1,17 +1,23 @@
 <script>
+    import Icon from "./icon.svelte"
+    import createQuestion from "./modal/list/createQuestion.svelte";
+    import {openModal} from "../data/store";
     export let data
+    export let deleteSelf
+    export let editSelf
 </script>
 
 <div class="question">
     <div class="controls">
-        <img class="icon" src="/icons/edit.svg" alt="edit-icon" on:click={() => {
-
+        <Icon src="/icons/edit.svg" click={() => {
+            openModal(createQuestion, {editSelf, currentData: data})
         }}/>
-        <img class="icon" src="/icons/remove.svg" alt="edit-icon" on:click={() => {
-
-        }}/>
+        <Icon src="/icons/remove.svg" click={deleteSelf}/>
     </div>
-    <p>hi</p>
+    <div class="words">
+        <p>{data.words.join(";")}</p>
+        <p>{data.otherWords.join(";")}</p>
+    </div>
 </div>
 
 <style>
@@ -19,5 +25,14 @@
         background-color: var(--dark);
         padding: 10px 15px;
         border-radius: var(--radius);
+    }
+
+    .words{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    p{
+        font-weight: bold;
     }
 </style>
