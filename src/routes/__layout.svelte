@@ -85,5 +85,11 @@
             box-shadow: 5px 10px #000000;
         }
     }
+
+    @media (max-height: 600px){
+        #main{
+            max-height: unset;
+        }
+    }
 </style>
 
