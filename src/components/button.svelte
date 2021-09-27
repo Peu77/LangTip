@@ -22,7 +22,7 @@
 <style>
     .button{
         display: block;
-        padding: 10px 15px;
+        padding: var(--padding);
         font-size: 16px;
         cursor: pointer;
         color: white;

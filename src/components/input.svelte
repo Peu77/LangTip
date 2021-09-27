@@ -12,7 +12,7 @@
         border-radius: var(--radius);
         border: none;
         outline: none;
-        padding: 10px;
+        padding: var(--padding);
         color: white;
     }
 </style>

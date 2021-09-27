@@ -10,9 +10,11 @@
 
 </script>
 
-<main id="main">
-    <slot></slot>
-</main>
+<div class="page">
+    <main id="main">
+        <slot></slot>
+    </main>
+</div>
 
 {#if $modal.open}
     <Modal modal={$modal}/>
@@ -26,8 +28,8 @@
         --primary: #1565c0;
         --text: #14cba8;
         --gap: 16px;
+        --padding: 3px 6px;
     }
-
 
     :global(p, h1, h2, h3, h4) {
         color: var(--text);
@@ -35,9 +37,27 @@
         font-family: Montserrat, Arial, serif;
     }
 
-    :global(body){
-        box-sizing: border-box;
+    :global(p){
+        font-size: 10px;
+    }
+
+    @media (min-width: 500px) {
+        :global(:root){
+            --padding: 10px 13px;
+        }
+        :global(p){
+            font-size: 14px;
+        }
+    }
+
+    .page{
         background-color: #273142;
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     :global(*){
@@ -65,12 +85,11 @@
     }
 
     #main{
-        width: calc(100vw - 90px);
-        height: calc(100vh - 90px);
+        width: 100%;
+        height: 100%;
         background-color: var(--primary);
         padding: 36px;
         overflow: auto;
-
     }
 
     @media (min-width: 1200px){
@@ -78,10 +97,6 @@
             max-width: 800px;
             max-height: 600px;
             border-radius: var(--radius);
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
             box-shadow: 5px 10px #000000;
         }
     }

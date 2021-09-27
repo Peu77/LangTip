@@ -25,7 +25,7 @@
         box-shadow: 5px 10px rgba(0, 0, 0, 0.75);
         max-width: 500px;
         max-height: 400px;
-        width: 100vh;
+        width: 100vw;
         height: 100vh;
         background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgb(24, 24, 134) 35%, rgb(36, 140, 161) 100%);
         display: flex;
