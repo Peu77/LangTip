@@ -65,8 +65,8 @@
     }
 
     #main{
-        width: 100vw;
-        height: 100vh;
+        width: calc(100vw - 90px);
+        height: calc(100vh - 90px);
         background-color: var(--primary);
         padding: 36px;
         overflow: auto;
@@ -83,12 +83,6 @@
             top: 50%;
             transform: translate(-50%, -50%);
             box-shadow: 5px 10px #000000;
-        }
-    }
-
-    @media (max-height: 600px){
-        #main{
-            max-height: unset;
         }
     }
 </style>
