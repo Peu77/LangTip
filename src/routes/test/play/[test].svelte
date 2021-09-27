@@ -85,7 +85,7 @@
                     return
                 }
                 if(config["random"])
-                    currentLevel = Math.floor(Math.random() * (questions.length - 1))
+                    currentLevel = Math.floor(Math.random() * questions.length)
                     else
                     currentLevel++
 
@@ -106,7 +106,7 @@
         <h2>{text}</h2>
         {#if currentQuestion !== undefined}
             <div class="words">
-                <h1>{lastWords[Math.floor(Math.random() * (lastWords.length - 1))]}</h1>
+                <h1>{lastWords[Math.floor(Math.random() * lastWords.length)]}</h1>
                 <h2 class="error">{error}</h2>
             </div>
 
