@@ -3,6 +3,7 @@
     import Test from "../components/test.svelte";
     import Button from "../components/button.svelte"
     import CreateTest from "../components/modal/list/createTest.svelte"
+    import LoadTests from "../components/modal/list/loadTests.svelte"
     import Input from "../components/input.svelte"
     import { quintOut } from 'svelte/easing';
     import { crossfade } from 'svelte/transition';
@@ -30,6 +31,7 @@
 
 <div id="controls">
     <Button text="Create-Test" click={() => openModal(CreateTest)}/>
+    <Button text="Load Tests" click={() => openModal(LoadTests)}/>
     <Input placeHolder="Search" bind:value={search}/>
 </div>
 
@@ -39,7 +41,6 @@
              animate:flip>
             <Test test={test}/>
         </div>
-
     {/each}
 </div>
 
