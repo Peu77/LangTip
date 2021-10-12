@@ -32,6 +32,14 @@
         }
     }
 
+    function again(){
+        currentLevel = 0
+        totalErrors = 0
+        start = undefined
+        stop = undefined
+        updateLevelInfos()
+    }
+
     function updateWords() {
         if (currentQuestion !== undefined) {
             let b = Math.random() < 0.5
@@ -115,13 +123,7 @@
         {#if currentLevel === -1}
             <h3>Time: {(stop - start) / 1000} Seconds</h3>
             <h3>Errors: {totalErrors}</h3>
-            <Button text="Again" click={() => {
-                currentLevel = 0
-                totalErrors = 0
-                start = undefined
-                stop = undefined
-                updateLevelInfos()
-            }}/>
+            <Button text="Again" click={again}/>
         {/if}
 
         <div class="settings">
@@ -129,6 +131,7 @@
                 <p class={"setting " + (config[setting]? "enable": "")}
                    on:click={() => changeConfig(setting)}>{setting}</p>
             {/each}
+            <Button text="Again" click={again}/>
         </div>
     </div>
 {/if}
@@ -163,6 +166,7 @@
         font-weight: bold;
         width: 100%;
         display: flex;
+        align-items: center;
     }
 
     .setting {
