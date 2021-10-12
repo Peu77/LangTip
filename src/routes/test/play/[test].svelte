@@ -32,7 +32,7 @@
         }
     }
 
-    function again(){
+    function again() {
         currentLevel = 0
         totalErrors = 0
         start = undefined
@@ -90,6 +90,25 @@
                 if(!firstWords.includes(input)){
                     error = firstWords.join(";")
                     totalErrors++
+
+                     for(let i = 0; i < input.length; i++) {
+                       const char = input[i]
+                         if(!contains(char, i, firstWords)){
+                            input = input.slice(0, i)
+                            return
+                         }
+                     }
+
+                    function contains(char, index, array){
+                        let found = false
+                        array.filter(target => target.length >= index).forEach(target => {
+                            if(target[index] === char) {
+                                found = true
+                            }
+                        })
+                        return found
+                    }
+
                     return
                 }
                 if(config["random"])
