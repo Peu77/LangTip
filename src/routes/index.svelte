@@ -9,6 +9,7 @@
     import {flip} from 'svelte/animate';
     const [send, receive] = crossfade({
         duration: d => Math.sqrt(d * 200),
+
         fallback(node, params) {
             const style = getComputedStyle(node);
             const transform = style.transform === 'none' ? '' : style.transform;
