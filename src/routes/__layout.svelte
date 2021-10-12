@@ -22,11 +22,21 @@
 
 <style>
     :global(:root){
+       /*
         --dark: #151f52;
         --radius: 10px;
         --light: #5e92f3;
         --primary: #1565c0;
         --text: #14cba8;
+        --gap: 16px;
+        --padding: 3px 6px;
+        */
+
+        --dark: #181735;
+        --radius: 10px;
+        --light: #454488;
+        --primary: #1f1e3e;
+        --text: #e4e3e6;
         --gap: 16px;
         --padding: 3px 6px;
     }
@@ -51,7 +61,7 @@
     }
 
     .page{
-        background-color: #273142;
+        background-color: #29264d;
         overflow: hidden;
         height: 100vh;
         width: 100vw;
@@ -97,7 +107,7 @@
             max-width: 800px;
             max-height: 600px;
             border-radius: var(--radius);
-            box-shadow: 5px 10px #000000;
+            box-shadow: 2px 5px rgba(0, 0, 0, 0.8);
         }
     }
 </style>

@@ -27,7 +27,7 @@
         max-height: 400px;
         width: 100vw;
         height: 100vh;
-        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgb(24, 24, 134) 35%, rgb(36, 140, 161) 100%);
+        background: #111021;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -42,7 +42,7 @@
 
     @keyframes fadeIn {
         0% {
-            transform: scale(0) translate(-100%, -100%);
+            transform: scale(0) translate(-150%, -150%);
             filter: opacity(0);
         }
         100% {
