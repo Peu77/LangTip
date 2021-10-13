@@ -13,7 +13,7 @@ this is a simple vocabulary learn app
 
 ## Developing
 
-start a development server:
+Start a development server:
 
 ```bash
 npm run dev
