@@ -1,13 +1,13 @@
 # LangTip
 
-##Install
+## Install
 ```bash
 git clone https://github.com/Peu77/LangTip.git
 cd langtip
 npm i
 ```
 
-##About
+## About
 this is a simple vocabulary learn app 
 
 
