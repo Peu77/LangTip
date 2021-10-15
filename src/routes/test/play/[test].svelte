@@ -91,6 +91,10 @@
                     error = firstWords.join(";")
                     totalErrors++
 
+                    const newArray = questions.filter(question => question.uuid !== currentQuestion.uuid)
+                    newArray.unshift(currentQuestion)
+                    questions = newArray
+
                      for(let i = 0; i < input.length; i++) {
                        const char = input[i]
                          if(!contains(char, i, firstWords)){
