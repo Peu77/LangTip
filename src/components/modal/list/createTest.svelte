@@ -4,16 +4,23 @@
     import Input from "../../input.svelte"
 
     let name = ""
+
+    function create(){
+            if(createTest(name))
+                closeModal()
+    }
 </script>
+
+<svelte:window on:keypress={event => {
+    if(event.key === "Enter")
+        create()
+}}/>
 
 <div class="content">
     <Input placeHolder="name" bind:value={name}/>
     <div class="buttons">
         <Button background="#577523"
-                click={() => {
-            if(createTest(name))
-                closeModal()
-        }} text="Create"/>
+                click={create} text="Create"/>
         <Button click={closeModal} text="Cancel"/>
     </div>
 

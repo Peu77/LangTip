@@ -123,8 +123,7 @@
                     if(currentLevel === questions.length){
                          currentLevel = -1
                         currentQuestion = undefined
-                }
-
+                    }
 
                 error = ""
                 updateLevelInfos()
