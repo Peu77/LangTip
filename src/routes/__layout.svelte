@@ -28,7 +28,7 @@
         if(backgroundColor !== "")
         changeCssVariable("--background", backgroundColor)
 
-        if(data === "ja"){
+        if(data === "true"){
             backgroundImage = true
             document.querySelector(".page").style.background = "url(/background.png)"
         }
@@ -65,11 +65,12 @@
    <div>
        <p>image</p>
        <input type="checkbox" bind:checked={backgroundImage} on:change={() => {
-           localStorage.setItem("backgroundImage", backgroundImage ? "ja" : "nein")
+           localStorage.setItem("backgroundImage", backgroundImage.toString())
+           const page = document.querySelector(".page")
            if(backgroundImage){
-               document.querySelector(".page").style.background = "url(/background.png)"
+               page.style.background = "url(/background.png)"
            }else{
-                document.querySelector(".page").style.background = "var(--background)"
+                page.style.background = "var(--background)"
            }
        }}>
    </div>
