@@ -185,10 +185,11 @@
     }
 
     .settings {
+        display: inline-block;
         font-weight: bold;
-        width: 100%;
         display: flex;
         align-items: center;
+        justify-content: center;
     }
 
     .setting {
@@ -200,5 +201,16 @@
 
     .enable {
         color: greenyellow;
+    }
+
+    @media screen and (max-width: 553px) {
+        .container{
+            padding: 100px 0;
+        }
+
+        .settings{
+            flex-direction: column;
+            gap: 10px;
+        }
     }
 </style>

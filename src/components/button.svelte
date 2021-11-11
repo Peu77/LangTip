@@ -21,7 +21,9 @@
 
 <style>
     .button{
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding: var(--padding);
         font-size: 16px;
         cursor: pointer;

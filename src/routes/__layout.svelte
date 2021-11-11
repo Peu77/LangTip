@@ -91,6 +91,10 @@
 {/if}
 
 <style>
+    :global(body){
+        background-color: #111021;
+    }
+
     :global(:root){
        /*
         --dark: #151f52;
@@ -109,7 +113,7 @@
         --primary: #1f1e3e;
         --text: #e4e3e6;
         --gap: 16px;
-        --padding: 3px 6px;
+        --padding: 10px 6px;
     }
 
     :global(p, h1, h2, h3, h4) {
@@ -119,7 +123,7 @@
     }
 
     :global(p){
-        font-size: 10px;
+        font-size: 12px;
     }
 
     @media (min-width: 500px) {
@@ -169,8 +173,8 @@
         width: 100%;
         height: 100%;
         background-color: var(--primary);
-        padding: 36px;
         overflow: auto;
+        padding: 5px;
     }
 
     #author{
@@ -221,6 +225,7 @@
             display: flex;
         }
         #main{
+            padding: 36px;
             max-width: 800px;
             max-height: 600px;
             border-radius: var(--radius);
