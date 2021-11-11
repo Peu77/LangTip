@@ -3,9 +3,43 @@
     import Modal from "../components/modal/modal.svelte";
     import {onMount} from "svelte";
 
+    let backgroundColor = ""
+    let backgroundImage = false
+    let opacity = false
+    function changeCssVariable(name, value){
+        document.documentElement.style.setProperty(name, value)
+    }
+
+    function changeOpacity(value){
+        const main =  document.querySelector("#main")
+        if(value)
+            main.style.filter = "opacity(.8)"
+        else
+            main.style.filter = "none"
+    }
+
     onMount(() => {
         loadTests()
         window.onbeforeunload = saveTests
+        backgroundColor = localStorage.getItem("backgroundColor") || ""
+        const data = localStorage.getItem("backgroundImage") || "nein"
+
+
+        if(backgroundColor !== "")
+        changeCssVariable("--background", backgroundColor)
+
+        if(data === "ja"){
+            backgroundImage = true
+            document.querySelector(".page").style.background = "url(/background.png)"
+        }
+
+        const opacityLoaded = localStorage.getItem("opacity")
+        if(opacityLoaded === "true"){
+            changeOpacity(true)
+            opacity = true
+        }
+
+
     })
 
 </script>
@@ -14,6 +48,42 @@
     <main id="main">
         <slot></slot>
     </main>
+
+    <div id="author">
+        <p>Author: Emil</p>
+        <p>Github: <a href="https://github.com/peu77/langtip">Project</a></p>
+    </div>
+
+    <div id="backgroundColor">
+        <div>
+            <p>background</p>
+            <input type="color" bind:value={backgroundColor} on:change={() => {
+            localStorage.setItem("backgroundColor", backgroundColor)
+            changeCssVariable("--background", backgroundColor)
+        }}>
+        </div>
+   <div>
+       <p>image</p>
+       <input type="checkbox" bind:checked={backgroundImage} on:change={() => {
+           localStorage.setItem("backgroundImage", backgroundImage ? "ja" : "nein")
+           if(backgroundImage){
+               document.querySelector(".page").style.background = "url(/background.png)"
+           }else{
+                document.querySelector(".page").style.background = "var(--background)"
+           }
+       }}>
+   </div>
+
+        <div>
+            <p>opacity</p>
+            <input type="checkbox" bind:checked={opacity} on:change={() => {
+                changeOpacity(opacity)
+                localStorage.setItem("opacity", opacity.toString())
+            }}>
+        </div>
+
+    </div>
+
 </div>
 
 {#if $modal.open}
@@ -32,6 +102,7 @@
         --padding: 3px 6px;
         */
 
+        --background:  #29264d;
         --dark: #181735;
         --radius: 10px;
         --light: #454488;
@@ -61,7 +132,7 @@
     }
 
     .page{
-        background-color: #29264d;
+        background-color: var(--background);
         overflow: hidden;
         height: 100vh;
         width: 100vw;
@@ -102,7 +173,53 @@
         overflow: auto;
     }
 
+    #author{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: #1f1e3e;
+        padding: 5px;
+        border-radius: var(--radius);
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    #author p{
+        font-size: 18px;
+    }
+
+    #backgroundColor{
+        display: none;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        min-width: 100px;
+        align-items: start;
+        font-weight: bold;
+        flex-direction: column;
+        background-color: #1f1e3e;
+        padding: 5px;
+        border-radius: var(--radius);
+    }
+
+    #backgroundColor div{
+        display: flex;
+        align-items: center;
+    }
+
+    #backgroundColor p{
+        font-size: 18px;
+    }
+
     @media (min-width: 1200px){
+        #backgroundColor{
+            display: flex;
+        }
+        #author{
+            display: flex;
+        }
         #main{
             max-width: 800px;
             max-height: 600px;
