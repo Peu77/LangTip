@@ -4,6 +4,7 @@
     import Button from "../components/button.svelte"
     import CreateTest from "../components/modal/list/createTest.svelte"
     import LoadTests from "../components/modal/list/loadTests.svelte"
+    import LoadTest from "../components/modal/list/loadTest.svelte"
     import Input from "../components/input.svelte"
     import { quintOut } from 'svelte/easing';
     import { crossfade } from 'svelte/transition';
@@ -32,6 +33,7 @@
 <div id="controls">
     <Button text="Create-Test" click={() => openModal(CreateTest)}/>
     <Button text="Load Tests" click={() => openModal(LoadTests)}/>
+    <Button text="Load single Test" click={() => openModal(LoadTest)}/>
     <Input placeHolder="Search" bind:value={search}/>
 </div>
 
