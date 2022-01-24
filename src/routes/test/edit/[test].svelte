@@ -1,6 +1,6 @@
 <script>
     import {page} from "$app/stores"
-    import {openModal, saveTests, tests} from "../../../data/store";
+    import {openModal, saveTests, tests, copyToClipboard} from "../../../data/store";
     import Button from "../../../components/button.svelte"
     import Question from "../../../components/question.svelte"
     import {onMount} from "svelte";
@@ -34,8 +34,12 @@
                      }]
                  test.questions = questions
                     saveTests()
-                },
+                }
             })
+        }}/>
+
+        <Button text="copy" click={() => {
+            copyToClipboard(JSON.stringify(test))
         }}/>
     </div>
 
