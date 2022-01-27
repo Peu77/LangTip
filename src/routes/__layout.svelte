@@ -74,7 +74,6 @@
            }
        }}>
    </div>
-
         <div>
             <p>opacity</p>
             <input type="checkbox" bind:checked={opacity} on:change={() => {

@@ -59,6 +59,7 @@
     }
 
     .text {
+        font-family: Montserrat, Arial, serif;
         height: 50px;
         resize: none;
         font-size: 16px;
