@@ -10,7 +10,7 @@
 
 
     function split(string) {
-       return string.split(",")
+        return string.split(",")
     }
 
     function isEdit() {
@@ -36,7 +36,15 @@
                  props.create(split(words), split(otherWords))
                  closeModal()
             }
+
         }}/>
+            <Button text="Next" background="#ab4918" click={() => {
+                if(words !== "" && otherWords !== ""){
+                      props.create(split(words), split(otherWords))
+                    words = "";
+                    otherWords = "";
+                    }
+            }}/>
         {:else}
             <Button text="Edit" background="#577523" click={() => {
                 if(words !== "" && otherWords !== ""){
@@ -63,6 +71,7 @@
         height: 50px;
         resize: none;
         font-size: 16px;
+        font-weight: 800;
         background-color: var(--dark);
         border-radius: var(--radius);
         border: none;

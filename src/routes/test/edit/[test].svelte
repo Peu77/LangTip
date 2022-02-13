@@ -71,6 +71,7 @@
     #controls .text {
         display: block;
         padding: 10px 15px;
+
         background-color: var(--dark);
         border-radius: var(--radius);
     }

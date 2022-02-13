@@ -33,6 +33,7 @@
     }
 
     p{
-        font-weight: bold;
+        font-weight: 800;
+        font-size: 20px;
     }
 </style>
