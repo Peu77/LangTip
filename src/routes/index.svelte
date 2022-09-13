@@ -9,6 +9,8 @@
     import { quintOut } from 'svelte/easing';
     import { crossfade } from 'svelte/transition';
     import {flip} from 'svelte/animate';
+    import GenerateTest from "../components/modal/list/generateTest.svelte";
+
     const [send, receive] = crossfade({
         duration: d => Math.sqrt(d * 200),
 
@@ -34,6 +36,7 @@
     <Button text="Create-Test" click={() => openModal(CreateTest)}/>
     <Button text="Load Tests" click={() => openModal(LoadTests)}/>
     <Button text="Load single Test" click={() => openModal(LoadTest)}/>
+    <Button text="Generate from book" click={() => openModal(GenerateTest)}/>
     <Input placeHolder="Search" bind:value={search}/>
 </div>
 
