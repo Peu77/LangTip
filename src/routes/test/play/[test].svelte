@@ -145,7 +145,6 @@
         {#if currentLevel === -1}
             <h3>Time: {(stop - start) / 1000} Seconds</h3>
             <h3>Errors: {totalErrors}</h3>
-            <Button text="Again" click={again}/>
         {/if}
 
         <div class="settings">
