@@ -127,6 +127,8 @@
 
                 error = ""
                 updateLevelInfos()
+            }else{
+                again()
             }
         }
     }}/>
@@ -203,11 +205,11 @@
     }
 
     @media screen and (max-width: 553px) {
-        .container{
+        .container {
             padding: 100px 0;
         }
 
-        .settings{
+        .settings {
             flex-direction: column;
             gap: 10px;
         }
