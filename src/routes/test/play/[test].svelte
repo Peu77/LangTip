@@ -19,6 +19,9 @@
     let firstWords = []
     let lastWords = []
 
+    // word pool for picking random words
+    let questionsForRandom = []
+
     const settings = ["random", "random_language"]
     const config = new Map()
 
@@ -59,8 +62,10 @@
 
     settings.forEach(setting => config[setting] = false)
 
-    function updateLevelInfos() {
+    function updateLevelInfos(nextQuestion = undefined) {
         currentQuestion = questions[currentLevel]
+        if (nextQuestion !== undefined)
+            currentQuestion = nextQuestion
         updateWords()
         if (currentLevel === -1) {
             text = "finish"
@@ -115,9 +120,24 @@
 
                     return
                 }
-                if(config["random"])
-                    currentLevel = Math.floor(Math.random() * questions.length)
-                    else
+                if(config["random"]){
+                    if(error == "")
+                    questionsForRandom = questionsForRandom.filter(question => question.uuid !== currentQuestion.uuid)
+
+                   if(questionsForRandom.length === 0){
+                        questionsForRandom = [...questions]
+                    }
+
+                    const index = Math.floor(Math.random() * questionsForRandom.length)
+                    // get index of questionsForRandom[index] in questions
+
+                    console.log("use word:", questionsForRandom[index].otherWords[0], questionsForRandom.length)
+
+                     currentLevel = index
+                      error = ""
+                     updateLevelInfos(questionsForRandom[index])
+                     return
+                }   else
                     currentLevel++
 
                     if(currentLevel === questions.length){
