@@ -131,8 +131,6 @@
                     const index = Math.floor(Math.random() * questionsForRandom.length)
                     // get index of questionsForRandom[index] in questions
 
-                    console.log("use word:", questionsForRandom[index].otherWords[0], questionsForRandom.length)
-
                      currentLevel = index
                       error = ""
                      updateLevelInfos(questionsForRandom[index])
