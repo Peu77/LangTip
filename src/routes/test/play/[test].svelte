@@ -18,11 +18,12 @@
     let stop
     let firstWords = []
     let lastWords = []
+    let wordTypeSetting = "English"
 
     // word pool for picking random words
     let questionsForRandom = []
 
-    const settings = ["random", "random_language"]
+    const settings = ["random"]
     const config = new Map()
 
     function changeConfig(setting) {
@@ -45,10 +46,14 @@
 
     function updateWords() {
         if (currentQuestion !== undefined) {
-            let b = Math.random() < 0.5
+            let b = false;
 
-            if (!config["random_language"])
+            if (wordTypeSetting === "English")
+                b = true
+            else if (wordTypeSetting === "German")
                 b = false
+            else if (wordTypeSetting === "Random")
+                b = Math.random() >= 0.5
 
             if (b) {
                 firstWords = currentQuestion.words
@@ -172,8 +177,13 @@
                 <p class={"setting " + (config[setting]? "enable": "")}
                    on:click={() => changeConfig(setting)}>{setting}</p>
             {/each}
-            <Button text="Again" click={again}/>
+            <select bind:value={wordTypeSetting}>
+                <option>English</option>
+                <option>German</option>
+                <option>Random</option>
+            </select>
         </div>
+        <Button text="Again" click={again}/>
     </div>
 {/if}
 
