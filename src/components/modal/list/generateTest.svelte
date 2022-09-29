@@ -18,7 +18,8 @@
     <Input bind:value={name} placeHolder="name"/>
     <Input bind:value={firstWord} placeHolder="First-english-word"/>
     <Input bind:value={secondWord} placeHolder="Last-english-word"/>
-    <p>generate all the words from the book, just type the english word from which you want to start and the last word.</p>
+    <p>generate all the words from the book, just type the english word from which you want to start and the last
+        word.</p>
     <Button background="#577523"
             click={() => {
             if(name !== "" && firstWord !== "" && secondWord !== ""){
@@ -69,7 +70,7 @@
         position: relative;;
     }
 
-    .content p{
+    .content p {
         position: absolute;
         top: -90px;
         right: -230px;

@@ -1,5 +1,157 @@
 [
   {
+    "english": "Englisch",
+    "german": "Deutsch"
+  },
+  {
+    "english": "earthquake",
+    "german": "Erdbeben"
+  },
+  {
+    "english": "prince",
+    "german": "Prinz"
+  },
+  {
+    "english": "New Zealand",
+    "german": "Neuseeland"
+  },
+  {
+    "english": "disability",
+    "german": "Behinderung; Unfähigkeit"
+  },
+  {
+    "english": "common",
+    "german": "gemeinsam; häufig; verbreitet; gewöhnlich;\ngebräuchlich"
+  },
+  {
+    "english": "business",
+    "german": "Betrieb"
+  },
+  {
+    "english": "Nigeria",
+    "german": "Nigeria"
+  },
+  {
+    "english": "working",
+    "german": "Arbeits-"
+  },
+  {
+    "english": "visa",
+    "german": "Visum; Einreisebewilligung"
+  },
+  {
+    "english": "anniversary",
+    "german": "Jahrestag; Jubiläum"
+  },
+  {
+    "english": "Brazil",
+    "german": "Brasilien"
+  },
+  {
+    "english": "Malta",
+    "german": "Malta"
+  },
+  {
+    "english": "US",
+    "german": "Vereinigte Staaten"
+  },
+  {
+    "english": "polar bear",
+    "german": "Eisbär"
+  },
+  {
+    "english": "ice hockey",
+    "german": "Eishockey"
+  },
+  {
+    "english": "Canadian",
+    "german": "Kanadier; Kanadierin; kanadisch; aus Kanada"
+  },
+  {
+    "english": "to skate",
+    "german": "Schlittschuh laufen; skaten"
+  },
+  {
+    "english": "wilderness",
+    "german": "Wildnis"
+  },
+  {
+    "english": "to fascinate",
+    "german": "faszinieren; begeistern"
+  },
+  {
+    "english": "explorer",
+    "german": "Entdecker; Entdeckerin; Forscher; Forscherin"
+  },
+  {
+    "english": "grizzly bear",
+    "german": "Grizzlybär"
+  },
+  {
+    "english": "moose (sg), moose (pl)",
+    "german": "Elch"
+  },
+  {
+    "english": "challenging",
+    "german": "herausfordernd; schwierig"
+  },
+  {
+    "english": "official language",
+    "german": "Amtssprache"
+  },
+  {
+    "english": "province",
+    "german": "Provinz"
+  },
+  {
+    "english": "indigenous people",
+    "german": "einheimisches Volk; Ureinwohner; Ureinwohnerinnen"
+  },
+  {
+    "english": "natural resource",
+    "german": "Rohstoff; Bodenschatz; Ressource"
+  },
+  {
+    "english": "reserve",
+    "german": "Reserve; Vorkommen"
+  },
+  {
+    "english": "Venezuela",
+    "german": "Venezuela"
+  },
+  {
+    "english": "Saudi Arabia",
+    "german": "Saudi-Arabien"
+  },
+  {
+    "english": "to export",
+    "german": "exportieren; ausführen"
+  },
+  {
+    "english": "ambition",
+    "german": "Ziel"
+  },
+  {
+    "english": "oppression",
+    "german": "Unterdrückung"
+  },
+  {
+    "english": "ceremony",
+    "german": "Festakt; Zeremonie"
+  },
+  {
+    "english": "oath",
+    "german": "Eid"
+  },
+  {
+    "english": "citizenship",
+    "german": "Staatsbürgerschaft; Staatsangehörigkeit"
+  },
+  {
+    "english": "coach",
+    "german": "Trainer; Trainerin"
+  },
+  {
     "english": "period",
     "german": "Spielzeit; Periode; Zeitspanne; hier: Drittel"
   },
@@ -154,330 +306,6 @@
   {
     "english": "to destroy",
     "german": "zerstören"
-  },
-  {
-    "english": "Englisch",
-    "german": "Deutsch"
-  },
-  {
-    "english": "earthquake",
-    "german": "Erdbeben"
-  },
-  {
-    "english": "prince",
-    "german": "Prinz"
-  },
-  {
-    "english": "New Zealand",
-    "german": "Neuseeland"
-  },
-  {
-    "english": "disability",
-    "german": "Behinderung; Unfähigkeit"
-  },
-  {
-    "english": "common",
-    "german": "gemeinsam; häufig; verbreitet; gewöhnlich;\ngebräuchlich"
-  },
-  {
-    "english": "business",
-    "german": "Betrieb"
-  },
-  {
-    "english": "Nigeria",
-    "german": "Nigeria"
-  },
-  {
-    "english": "working",
-    "german": "Arbeits-"
-  },
-  {
-    "english": "visa",
-    "german": "Visum; Einreisebewilligung"
-  },
-  {
-    "english": "anniversary",
-    "german": "Jahrestag; Jubiläum"
-  },
-  {
-    "english": "Brazil",
-    "german": "Brasilien"
-  },
-  {
-    "english": "Malta",
-    "german": "Malta"
-  },
-  {
-    "english": "US",
-    "german": "Vereinigte Staaten"
-  },
-  {
-    "english": "polar bear",
-    "german": "Eisbär"
-  },
-  {
-    "english": "ice hockey",
-    "german": "Eishockey"
-  },
-  {
-    "english": "Canadian",
-    "german": "Kanadier; Kanadierin; kanadisch; aus Kanada"
-  },
-  {
-    "english": "to skate",
-    "german": "Schlittschuh laufen; skaten"
-  },
-  {
-    "english": "wilderness",
-    "german": "Wildnis"
-  },
-  {
-    "english": "to fascinate",
-    "german": "faszinieren; begeistern"
-  },
-  {
-    "english": "explorer",
-    "german": "Entdecker; Entdeckerin; Forscher; Forscherin"
-  },
-  {
-    "english": "grizzly bear",
-    "german": "Grizzlybär"
-  },
-  {
-    "english": "moose (sg), moose (pl)",
-    "german": "Elch"
-  },
-  {
-    "english": "challenging",
-    "german": "herausfordernd; schwierig"
-  },
-  {
-    "english": "official language",
-    "german": "Amtssprache"
-  },
-  {
-    "english": "province",
-    "german": "Provinz"
-  },
-  {
-    "english": "indigenous people",
-    "german": "einheimisches Volk; Ureinwohner; Ureinwohnerinnen"
-  },
-  {
-    "english": "natural resource",
-    "german": "Rohstoff; Bodenschatz; Ressource"
-  },
-  {
-    "english": "reserve",
-    "german": "Reserve; Vorkommen"
-  },
-  {
-    "english": "Venezuela",
-    "german": "Venezuela"
-  },
-  {
-    "english": "Saudi Arabia",
-    "german": "Saudi-Arabien"
-  },
-  {
-    "english": "to export",
-    "german": "exportieren; ausführen"
-  },
-  {
-    "english": "ambition",
-    "german": "Ziel"
-  },
-  {
-    "english": "oppression",
-    "german": "Unterdrückung"
-  },
-  {
-    "english": "ceremony",
-    "german": "Festakt; Zeremonie"
-  },
-  {
-    "english": "oath",
-    "german": "Eid"
-  },
-  {
-    "english": "citizenship",
-    "german": "Staatsbürgerschaft; Staatsangehörigkeit"
-  },
-  {
-    "english": "coach",
-    "german": "Trainer; Trainerin"
-  },
-  {
-    "english": "this far north",
-    "german": "so weit im Norden"
-  },
-  {
-    "english": "north",
-    "german": "nördlich"
-  },
-  {
-    "english": "icy",
-    "german": "eisig"
-  },
-  {
-    "english": "starving",
-    "german": "am Verhungern; hungrig; hungernd"
-  },
-  {
-    "english": "How did we get to this point?",
-    "german": "Wie konnte es nur so weit kommen?"
-  },
-  {
-    "english": "after",
-    "german": "nachdem"
-  },
-  {
-    "english": "Greenland",
-    "german": "Grönland"
-  },
-  {
-    "english": "to make progress",
-    "german": "vorankommen"
-  },
-  {
-    "english": "passage",
-    "german": "Passage"
-  },
-  {
-    "english": "sea route",
-    "german": "Seeweg"
-  },
-  {
-    "english": "officer",
-    "german": "Offizier"
-  },
-  {
-    "english": "entertainment (no pl)",
-    "german": "Unterhaltung"
-  },
-  {
-    "english": "tinned",
-    "german": "Dosen-; konserviert"
-  },
-  {
-    "english": "ration",
-    "german": "Ration"
-  },
-  {
-    "english": "rabbit",
-    "german": "Kaninchen"
-  },
-  {
-    "english": "partridge",
-    "german": "Rebhuhn"
-  },
-  {
-    "english": "to go wrong",
-    "german": "schiefgehen"
-  },
-  {
-    "english": "to bury",
-    "german": "begraben; beerdigen"
-  },
-  {
-    "english": "filled with",
-    "german": "gefüllt mit"
-  },
-  {
-    "english": "fast-moving",
-    "german": "sich schnell bewegend"
-  },
-  {
-    "english": "noise",
-    "german": "Lärm"
-  },
-  {
-    "english": "thankfully",
-    "german": "glücklicherweise"
-  },
-  {
-    "english": "somehow",
-    "german": "irgendwie"
-  },
-  {
-    "english": "to get through sth",
-    "german": "etw. überstehen"
-  },
-  {
-    "english": "spring",
-    "german": "Frühling"
-  },
-  {
-    "english": "to melt",
-    "german": "schmelzen"
-  },
-  {
-    "english": "cold",
-    "german": "Erkältung; Kälte"
-  },
-  {
-    "english": "dog team",
-    "german": "Hundegespann"
-  },
-  {
-    "english": "location",
-    "german": "Aufenthaltsort"
-  },
-  {
-    "english": "trapped",
-    "german": "gefangen; eingeschlossen"
-  },
-  {
-    "english": "salted",
-    "german": "gesalzen; gepökelt"
-  },
-  {
-    "english": "to go bad",
-    "german": "schlecht werden"
-  },
-  {
-    "english": "mad",
-    "german": "verrückt; wütend"
-  },
-  {
-    "english": "dying",
-    "german": "im Sterben liegend; sterbend"
-  },
-  {
-    "english": "the unknown",
-    "german": "das Unbekannte"
-  },
-  {
-    "english": "Arctic",
-    "german": "arktisch"
-  },
-  {
-    "english": "northern",
-    "german": "Nord-; nördlich"
-  },
-  {
-    "english": "wolf (sg), wolves (pl)",
-    "german": "Wolf"
-  },
-  {
-    "english": "bison (sg), bison (pl)",
-    "german": "Bison; Büffel"
-  },
-  {
-    "english": "beluga whale",
-    "german": "Weißwal"
-  },
-  {
-    "english": "to clean off",
-    "german": "abwischen; hier: abstreifen; abreiben"
-  },
-  {
-    "english": "skin",
-    "german": "Haut; Fell"
-  },
-  {
-    "english": "seal",
-    "german": "Seehund; Robbe"
   },
   {
     "english": "leak",
@@ -652,168 +480,176 @@
     "german": "nach Süden; südlich"
   },
   {
-    "english": "to appoint",
-    "german": "ernennen"
+    "english": "this far north",
+    "german": "so weit im Norden"
   },
   {
-    "english": "to dismiss sb",
-    "german": "jmdm. kündigen; jmdn. entlassen"
+    "english": "north",
+    "german": "nördlich"
   },
   {
-    "english": "working conditions (pl only)",
-    "german": "Arbeitsbedingungen"
+    "english": "icy",
+    "german": "eisig"
   },
   {
-    "english": "orphanage",
-    "german": "Waisenhaus"
+    "english": "starving",
+    "german": "am Verhungern; hungrig; hungernd"
   },
   {
-    "english": "included",
-    "german": "inbegriffen"
+    "english": "How did we get to this point?",
+    "german": "Wie konnte es nur so weit kommen?"
   },
   {
-    "english": "vaccination",
-    "german": "Impfung"
+    "english": "after",
+    "german": "nachdem"
   },
   {
-    "english": "foreigner",
-    "german": "Ausländer; Ausländerin; Fremder; Fremde"
+    "english": "Greenland",
+    "german": "Grönland"
   },
   {
-    "english": "to greet",
-    "german": "grüßen; begrüßen"
+    "english": "to make progress",
+    "german": "vorankommen"
   },
   {
-    "english": "to bow",
-    "german": "sich verbeugen"
+    "english": "passage",
+    "german": "Passage"
   },
   {
-    "english": "building",
-    "german": "Bau-"
+    "english": "sea route",
+    "german": "Seeweg"
   },
   {
-    "english": "youth club",
-    "german": "Jugendtreff"
+    "english": "officer",
+    "german": "Offizier"
   },
   {
-    "english": "basic",
-    "german": "Grund-"
+    "english": "entertainment (no pl)",
+    "german": "Unterhaltung"
   },
   {
-    "english": "shared",
-    "german": "geteilt; Gemeinschafts-"
+    "english": "tinned",
+    "german": "Dosen-; konserviert"
   },
   {
-    "english": "stray",
-    "german": "streunend; herrenlos"
+    "english": "ration",
+    "german": "Ration"
   },
   {
-    "english": "guest house",
-    "german": "Gästehaus; Pension"
+    "english": "rabbit",
+    "german": "Kaninchen"
   },
   {
-    "english": "logistics (pl only)",
-    "german": "Logistik"
+    "english": "partridge",
+    "german": "Rebhuhn"
   },
   {
-    "english": "freight (no pl)",
-    "german": "Fracht; Güter"
+    "english": "to go wrong",
+    "german": "schiefgehen"
   },
   {
-    "english": "product",
-    "german": "Produkt; Erzeugnis"
+    "english": "to bury",
+    "german": "begraben; beerdigen"
   },
   {
-    "english": "raw material",
-    "german": "Rohmaterial; Rohstoff"
+    "english": "filled with",
+    "german": "gefüllt mit"
   },
   {
-    "english": "to assemble",
-    "german": "zusammenbauen; montieren"
+    "english": "fast-moving",
+    "german": "sich schnell bewegend"
   },
   {
-    "english": "finished",
-    "german": "fertig"
+    "english": "noise",
+    "german": "Lärm"
   },
   {
-    "english": "to deliver",
-    "german": "liefern"
+    "english": "thankfully",
+    "german": "glücklicherweise"
   },
   {
-    "english": "to import",
-    "german": "importieren; einführen"
+    "english": "somehow",
+    "german": "irgendwie"
   },
   {
-    "english": "warehouse",
-    "german": "Lager; Lagerhalle; Depot"
+    "english": "to get through sth",
+    "german": "etw. überstehen"
   },
   {
-    "english": "to store",
-    "german": "lagern; aufbewahren; speichern"
+    "english": "spring",
+    "german": "Frühling"
   },
   {
-    "english": "to pack",
-    "german": "verpacken"
+    "english": "to melt",
+    "german": "schmelzen"
   },
   {
-    "english": "assembly",
-    "german": "Fertigung; Montage"
+    "english": "cold",
+    "german": "Erkältung; Kälte"
   },
   {
-    "english": "delivery",
-    "german": "Lieferung; Auslieferung; Zustellung"
+    "english": "dog team",
+    "german": "Hundegespann"
   },
   {
-    "english": "storage",
-    "german": "Speicherung; Lagerung"
+    "english": "location",
+    "german": "Aufenthaltsort"
   },
   {
-    "english": "to handle",
-    "german": "hier: umschlagen"
+    "english": "trapped",
+    "german": "gefangen; eingeschlossen"
   },
   {
-    "english": "to design",
-    "german": "entwerfen; gestalten"
+    "english": "salted",
+    "german": "gesalzen; gepökelt"
   },
   {
-    "english": "to promote",
-    "german": "werben für"
+    "english": "to go bad",
+    "german": "schlecht werden"
   },
   {
-    "english": "to be connected",
-    "german": "zusammenhängen; in Zusammenhang stehen"
+    "english": "mad",
+    "german": "verrückt; wütend"
   },
   {
-    "english": "possible",
-    "german": "möglich"
+    "english": "dying",
+    "german": "im Sterben liegend; sterbend"
   },
   {
-    "english": "truck",
-    "german": "Truck; Lastwagen"
+    "english": "the unknown",
+    "german": "das Unbekannte"
   },
   {
-    "english": "remote",
-    "german": "fern; abgelegen"
+    "english": "Arctic",
+    "german": "arktisch"
   },
   {
-    "english": "airline",
-    "german": "Fluggesellschaft"
+    "english": "northern",
+    "german": "Nord-; nördlich"
   },
   {
-    "english": "to provide",
-    "german": "bieten; bereitstellen; versorgen"
+    "english": "wolf (sg), wolves (pl)",
+    "german": "Wolf"
   },
   {
-    "english": "office",
-    "german": "hier: Geschäftsstelle"
+    "english": "bison (sg), bison (pl)",
+    "german": "Bison; Büffel"
   },
   {
-    "english": "responsibility",
-    "german": "Verantwortung"
+    "english": "beluga whale",
+    "german": "Weißwal"
   },
   {
-    "english": "experienced",
-    "german": "erfahren"
+    "english": "to clean off",
+    "german": "abwischen; hier: abstreifen; abreiben"
+  },
+  {
+    "english": "skin",
+    "german": "Haut; Fell"
+  },
+  {
+    "english": "seal",
+    "german": "Seehund; Robbe"
   },
   {
     "english": "contrast",
@@ -986,6 +822,170 @@
   {
     "english": "trial period",
     "german": "Probezeit"
+  },
+  {
+    "english": "to appoint",
+    "german": "ernennen"
+  },
+  {
+    "english": "to dismiss sb",
+    "german": "jmdm. kündigen; jmdn. entlassen"
+  },
+  {
+    "english": "working conditions (pl only)",
+    "german": "Arbeitsbedingungen"
+  },
+  {
+    "english": "orphanage",
+    "german": "Waisenhaus"
+  },
+  {
+    "english": "included",
+    "german": "inbegriffen"
+  },
+  {
+    "english": "vaccination",
+    "german": "Impfung"
+  },
+  {
+    "english": "foreigner",
+    "german": "Ausländer; Ausländerin; Fremder; Fremde"
+  },
+  {
+    "english": "to greet",
+    "german": "grüßen; begrüßen"
+  },
+  {
+    "english": "to bow",
+    "german": "sich verbeugen"
+  },
+  {
+    "english": "building",
+    "german": "Bau-"
+  },
+  {
+    "english": "youth club",
+    "german": "Jugendtreff"
+  },
+  {
+    "english": "basic",
+    "german": "Grund-"
+  },
+  {
+    "english": "shared",
+    "german": "geteilt; Gemeinschafts-"
+  },
+  {
+    "english": "stray",
+    "german": "streunend; herrenlos"
+  },
+  {
+    "english": "guest house",
+    "german": "Gästehaus; Pension"
+  },
+  {
+    "english": "logistics (pl only)",
+    "german": "Logistik"
+  },
+  {
+    "english": "freight (no pl)",
+    "german": "Fracht; Güter"
+  },
+  {
+    "english": "product",
+    "german": "Produkt; Erzeugnis"
+  },
+  {
+    "english": "raw material",
+    "german": "Rohmaterial; Rohstoff"
+  },
+  {
+    "english": "to assemble",
+    "german": "zusammenbauen; montieren"
+  },
+  {
+    "english": "finished",
+    "german": "fertig"
+  },
+  {
+    "english": "to deliver",
+    "german": "liefern"
+  },
+  {
+    "english": "to import",
+    "german": "importieren; einführen"
+  },
+  {
+    "english": "warehouse",
+    "german": "Lager; Lagerhalle; Depot"
+  },
+  {
+    "english": "to store",
+    "german": "lagern; aufbewahren; speichern"
+  },
+  {
+    "english": "to pack",
+    "german": "verpacken"
+  },
+  {
+    "english": "assembly",
+    "german": "Fertigung; Montage"
+  },
+  {
+    "english": "delivery",
+    "german": "Lieferung; Auslieferung; Zustellung"
+  },
+  {
+    "english": "storage",
+    "german": "Speicherung; Lagerung"
+  },
+  {
+    "english": "to handle",
+    "german": "hier: umschlagen"
+  },
+  {
+    "english": "to design",
+    "german": "entwerfen; gestalten"
+  },
+  {
+    "english": "to promote",
+    "german": "werben für"
+  },
+  {
+    "english": "to be connected",
+    "german": "zusammenhängen; in Zusammenhang stehen"
+  },
+  {
+    "english": "possible",
+    "german": "möglich"
+  },
+  {
+    "english": "truck",
+    "german": "Truck; Lastwagen"
+  },
+  {
+    "english": "remote",
+    "german": "fern; abgelegen"
+  },
+  {
+    "english": "airline",
+    "german": "Fluggesellschaft"
+  },
+  {
+    "english": "to provide",
+    "german": "bieten; bereitstellen; versorgen"
+  },
+  {
+    "english": "office",
+    "german": "hier: Geschäftsstelle"
+  },
+  {
+    "english": "responsibility",
+    "german": "Verantwortung"
+  },
+  {
+    "english": "experienced",
+    "german": "erfahren"
   },
   {
     "english": "manager",
@@ -1440,146 +1440,6 @@
     "german": "Boden"
   },
   {
-    "english": "to yell",
-    "german": "brüllen; laut schreien"
-  },
-  {
-    "english": "stingray",
-    "german": "Stachelrochen"
-  },
-  {
-    "english": "frightened",
-    "german": "verängstigt"
-  },
-  {
-    "english": "smiling",
-    "german": "lächelnd"
-  },
-  {
-    "english": "to dog paddle",
-    "german": "paddeln"
-  },
-  {
-    "english": "to float",
-    "german": "schweben; treiben"
-  },
-  {
-    "english": "sharply",
-    "german": "hier: scharf"
-  },
-  {
-    "english": "to swallow",
-    "german": "schlucken"
-  },
-  {
-    "english": "to splutter",
-    "german": "ausspucken; prusten; stottern"
-  },
-  {
-    "english": "to drown",
-    "german": "ertrinken"
-  },
-  {
-    "english": "off",
-    "german": "von … weg"
-  },
-  {
-    "english": "underwater",
-    "german": "unter Wasser"
-  },
-  {
-    "english": "no matter",
-    "german": "egal; ganz gleich"
-  },
-  {
-    "english": "gotten (AE)",
-    "german": "gekommen; geworden"
-  },
-  {
-    "english": "whatever",
-    "german": "egal was; egal welche"
-  },
-  {
-    "english": "panic",
-    "german": "Panik"
-  },
-  {
-    "english": "flash",
-    "german": "Blitz; Lichtblitz"
-  },
-  {
-    "english": "closely",
-    "german": "genau"
-  },
-  {
-    "english": "satisfied",
-    "german": "zufrieden; überzeugt"
-  },
-  {
-    "english": "heart attack",
-    "german": "Herzinfarkt"
-  },
-  {
-    "english": "crayfish",
-    "german": "Languste; Flusskrebs"
-  },
-  {
-    "english": "silver",
-    "german": "Silber; Silber"
-  },
-  {
-    "english": "to tread, trod, trodden",
-    "german": "treten; betreten"
-  },
-  {
-    "english": "to appear",
-    "german": "auftauchen; erscheinen"
-  },
-  {
-    "english": "to blink",
-    "german": "blinzeln"
-  },
-  {
-    "english": "carving",
-    "german": "Schnitzerei"
-  },
-  {
-    "english": "portent",
-    "german": "Omen; Zeichen; Vorzeichen"
-  },
-  {
-    "english": "to tremble",
-    "german": "zittern; beben"
-  },
-  {
-    "english": "anticipation",
-    "german": "Vorahnung; Erwartung"
-  },
-  {
-    "english": "Let it be done.",
-    "german": "Lass es geschehen."
-  },
-  {
-    "english": "to form",
-    "german": "bilden"
-  },
-  {
-    "english": "tectonic plate",
-    "german": "tektonische Platte"
-  },
-  {
-    "english": "ash (no pl)",
-    "german": "Asche"
-  },
-  {
-    "english": "spring",
-    "german": "Quelle"
-  },
-  {
-    "english": "geyser",
-    "german": "Geysir"
-  },
-  {
     "english": "to shake",
     "german": "beben; zittern"
   },
@@ -1746,5 +1606,145 @@
   {
     "english": "mask",
     "german": "Maske"
+  },
+  {
+    "english": "to yell",
+    "german": "brüllen; laut schreien"
+  },
+  {
+    "english": "stingray",
+    "german": "Stachelrochen"
+  },
+  {
+    "english": "frightened",
+    "german": "verängstigt"
+  },
+  {
+    "english": "smiling",
+    "german": "lächelnd"
+  },
+  {
+    "english": "to dog paddle",
+    "german": "paddeln"
+  },
+  {
+    "english": "to float",
+    "german": "schweben; treiben"
+  },
+  {
+    "english": "sharply",
+    "german": "hier: scharf"
+  },
+  {
+    "english": "to swallow",
+    "german": "schlucken"
+  },
+  {
+    "english": "to splutter",
+    "german": "ausspucken; prusten; stottern"
+  },
+  {
+    "english": "to drown",
+    "german": "ertrinken"
+  },
+  {
+    "english": "off",
+    "german": "von … weg"
+  },
+  {
+    "english": "underwater",
+    "german": "unter Wasser"
+  },
+  {
+    "english": "no matter",
+    "german": "egal; ganz gleich"
+  },
+  {
+    "english": "gotten (AE)",
+    "german": "gekommen; geworden"
+  },
+  {
+    "english": "whatever",
+    "german": "egal was; egal welche"
+  },
+  {
+    "english": "panic",
+    "german": "Panik"
+  },
+  {
+    "english": "flash",
+    "german": "Blitz; Lichtblitz"
+  },
+  {
+    "english": "closely",
+    "german": "genau"
+  },
+  {
+    "english": "satisfied",
+    "german": "zufrieden; überzeugt"
+  },
+  {
+    "english": "heart attack",
+    "german": "Herzinfarkt"
+  },
+  {
+    "english": "crayfish",
+    "german": "Languste; Flusskrebs"
+  },
+  {
+    "english": "silver",
+    "german": "Silber; Silber"
+  },
+  {
+    "english": "to tread, trod, trodden",
+    "german": "treten; betreten"
+  },
+  {
+    "english": "to appear",
+    "german": "auftauchen; erscheinen"
+  },
+  {
+    "english": "to blink",
+    "german": "blinzeln"
+  },
+  {
+    "english": "carving",
+    "german": "Schnitzerei"
+  },
+  {
+    "english": "portent",
+    "german": "Omen; Zeichen; Vorzeichen"
+  },
+  {
+    "english": "to tremble",
+    "german": "zittern; beben"
+  },
+  {
+    "english": "anticipation",
+    "german": "Vorahnung; Erwartung"
+  },
+  {
+    "english": "Let it be done.",
+    "german": "Lass es geschehen."
+  },
+  {
+    "english": "to form",
+    "german": "bilden"
+  },
+  {
+    "english": "tectonic plate",
+    "german": "tektonische Platte"
+  },
+  {
+    "english": "ash (no pl)",
+    "german": "Asche"
+  },
+  {
+    "english": "spring",
+    "german": "Quelle"
+  },
+  {
+    "english": "geyser",
+    "german": "Geysir"
   }
 ]
