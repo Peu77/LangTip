@@ -6,13 +6,14 @@
     let backgroundColor = ""
     let backgroundImage = false
     let opacity = false
-    function changeCssVariable(name, value){
+
+    function changeCssVariable(name, value) {
         document.documentElement.style.setProperty(name, value)
     }
 
-    function changeOpacity(value){
-        const main =  document.querySelector("#main")
-        if(value)
+    function changeOpacity(value) {
+        const main = document.querySelector("#main")
+        if (value)
             main.style.filter = "opacity(.8)"
         else
             main.style.filter = "none"
@@ -25,16 +26,16 @@
         const data = localStorage.getItem("backgroundImage") || "nein"
 
 
-        if(backgroundColor !== "")
-        changeCssVariable("--background", backgroundColor)
+        if (backgroundColor !== "")
+            changeCssVariable("--background", backgroundColor)
 
-        if(data === "true"){
+        if (data === "true") {
             backgroundImage = true
-            document.querySelector(".page").style.background = "url(/background.png)"
+            document.querySelector(".background").style.visibility = "visible"
         }
 
         const opacityLoaded = localStorage.getItem("opacity")
-        if(opacityLoaded === "true"){
+        if (opacityLoaded === "true") {
             changeOpacity(true)
             opacity = true
         }
@@ -45,6 +46,9 @@
 </script>
 
 <div class="page">
+    <div class="background">
+
+    </div>
     <main id="main">
         <slot></slot>
     </main>
@@ -62,18 +66,20 @@
             changeCssVariable("--background", backgroundColor)
         }}>
         </div>
-   <div>
-       <p>image</p>
-       <input type="checkbox" bind:checked={backgroundImage} on:change={() => {
+        <div>
+            <p>image</p>
+            <input type="checkbox" bind:checked={backgroundImage} on:change={() => {
            localStorage.setItem("backgroundImage", backgroundImage.toString())
-           const page = document.querySelector(".page")
+              const background = document.querySelector(".background")
            if(backgroundImage){
-               page.style.background = "url(/background.png)"
+               background.style.visibility = "visible"
            }else{
+                 const page = document.querySelector(".page")
                 page.style.background = "var(--background)"
+                  background.style.visibility = "hidden"
            }
        }}>
-   </div>
+        </div>
         <div>
             <p>opacity</p>
             <input type="checkbox" bind:checked={opacity} on:change={() => {
@@ -91,22 +97,22 @@
 {/if}
 
 <style>
-    :global(body){
+    :global(body) {
         background-color: #111021;
     }
 
-    :global(:root){
-       /*
-        --dark: #151f52;
-        --radius: 10px;
-        --light: #5e92f3;
-        --primary: #1565c0;
-        --text: #14cba8;
-        --gap: 16px;
-        --padding: 3px 6px;
-        */
+    :global(:root) {
+        /*
+         --dark: #151f52;
+         --radius: 10px;
+         --light: #5e92f3;
+         --primary: #1565c0;
+         --text: #14cba8;
+         --gap: 16px;
+         --padding: 3px 6px;
+         */
 
-        --background:  #29264d;
+        --background: #29264d;
         --dark: #181735;
         --radius: 10px;
         --light: #454488;
@@ -122,20 +128,21 @@
         font-family: Montserrat, Arial, serif;
     }
 
-    :global(p){
+    :global(p) {
         font-size: 12px;
     }
 
     @media (min-width: 500px) {
-        :global(:root){
+        :global(:root) {
             --padding: 10px 13px;
         }
-        :global(p){
+
+        :global(p) {
             font-size: 14px;
         }
     }
 
-    .page{
+    .page {
         background-color: var(--background);
         overflow: hidden;
         height: 100vh;
@@ -143,41 +150,54 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 0;
     }
 
-    :global(*){
+    :global(*) {
         margin: 0;
         padding: 0;
     }
 
-    :global(::-webkit-scrollbar){
+    :global(::-webkit-scrollbar) {
         width: 10px;
         border-radius: var(--radius);
     }
 
-    :global(::-webkit-scrollbar-track){
+    :global(::-webkit-scrollbar-track) {
         background: #f1f1f1;
         border-radius: var(--radius);
     }
 
-    :global(::-webkit-scrollbar-thumb){
+    :global(::-webkit-scrollbar-thumb) {
         background: #888;
         border-radius: var(--radius);
     }
 
-    :global(::-webkit-scrollbar-thumb:hover){
+    :global(::-webkit-scrollbar-thumb:hover) {
         background: #555;
     }
 
-    #main{
+    #main {
         width: 100%;
         height: 100%;
         background-color: var(--primary);
         overflow: auto;
         padding: 5px;
+        z-index: 0;
     }
 
-    #author{
+    .background {
+        visibility: hidden;
+        position: absolute;
+        background: url(./background.svg) repeat center;
+        background-size: cover;
+        min-height: 100%;
+        max-height: 150px;
+        aspect-ratio: 1/1;
+        width: 100%;
+    }
+
+    #author {
         display: none;
         flex-direction: column;
         position: absolute;
@@ -190,11 +210,11 @@
         padding: 10px;
     }
 
-    #author p{
+    #author p {
         font-size: 18px;
     }
 
-    #backgroundColor{
+    #backgroundColor {
         display: none;
         position: absolute;
         right: 10px;
@@ -208,23 +228,25 @@
         border-radius: var(--radius);
     }
 
-    #backgroundColor div{
+    #backgroundColor div {
         display: flex;
         align-items: center;
     }
 
-    #backgroundColor p{
+    #backgroundColor p {
         font-size: 18px;
     }
 
-    @media (min-width: 1200px){
-        #backgroundColor{
+    @media (min-width: 1200px) {
+        #backgroundColor {
             display: flex;
         }
-        #author{
+
+        #author {
             display: flex;
         }
-        #main{
+
+        #main {
             padding: 36px;
             max-width: 800px;
             max-height: 600px;
