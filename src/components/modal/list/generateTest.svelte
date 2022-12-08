@@ -16,8 +16,13 @@
 <div class="content">
     <h1>Generate Test</h1>
     <Input bind:value={name} placeHolder="name"/>
-    <Input bind:value={firstWord} placeHolder="First-english-word"/>
-    <Input bind:value={secondWord} placeHolder="Last-english-word"/>
+    <Input bind:value={firstWord} placeHolder="First-english-word" list="words"/>
+    <datalist id="words">
+        {#each questions as question}
+            <option value={question.english + question.german} label={question.english + " = " + question.german}></option>
+        {/each}
+    </datalist>
+    <Input bind:value={secondWord} placeHolder="Last-english-word" list="words"/>
     <p>generate all the words from the book, just type the english word from which you want to start and the last
         word.</p>
     <Button background="#577523"
@@ -28,7 +33,8 @@
                 let run = false;
 
                 questions.forEach(word => {
-                    if (word.english === firstWord) {
+
+                    if (word.english + word.german === firstWord) {
                         run = true
                     }
 
@@ -40,7 +46,7 @@
                         })
                     }
 
-                    if (word.english === secondWord) {
+                    if (word.english + word.german === secondWord) {
                         run = false
                     }
                 })
