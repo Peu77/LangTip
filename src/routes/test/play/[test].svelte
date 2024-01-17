@@ -20,6 +20,8 @@
     let lastWords = []
     let wordTypeSetting = "English"
 
+    const extraCharacters = ["á", "é", "í", "ó", "ú", "ñ"]
+
     // word pool for picking random words
     let questionsForRandom = []
 
@@ -91,7 +93,16 @@
     })
 </script>
 
-<svelte:window on:keydown={event => {
+<svelte:window on:keyup={event => {
+   console.log("test")
+             input = input.replaceAll("æ", "á")
+             input = input.replaceAll("€", "é")
+             input = input.replaceAll("→", "í")
+             input = input.replaceAll("ø", "ó")
+             input = input.replaceAll("↓", "ú")
+             input = input.replaceAll("”", "ñ")
+}} on:keydown={event => {
+
     if(start === undefined){
         start = Date.now()
     }
@@ -172,6 +183,12 @@
             <h3>Errors: {totalErrors}</h3>
         {/if}
 
+        <div class="extraCharacters">
+            {#each extraCharacters as char}
+                <p class="setting" on:click={() => input += char}>{char}</p>
+            {/each}
+        </div>
+
         <div class="settings">
             {#each settings as setting}
                 <p class={"setting " + (config[setting]? "enable": "")}
@@ -188,6 +205,24 @@
 {/if}
 
 <style>
+    .extraCharacters {
+        display: flex;
+        gap: 10px;
+    }
+
+    .extraCharacters p {
+        cursor: pointer;
+        margin: 0;
+        padding: 15px 20px;
+        user-select: none;
+        transition: color 0.2s;
+        background-color: var(--background);
+    }
+
+    .extraCharacters p:hover {
+        background-color: var(--dark);
+    }
+
     .container {
         justify-content: center;
         display: flex;
